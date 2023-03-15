@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="200dp">
+
+    <AutoCompleteTextView
+        android:id="@+id/yenietxtgiris"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="20dp"
+        android:minHeight="48dp"
+        android:text="AutoCompleteTextView"
+        android:backgroundTint="@color/purple_200"
+        android:textColor="@color/purple_200"
+        android:textColorHint="@color/purple_200"
+        app:layout_constraintEnd_toStartOf="@+id/yenibtn1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/yenibtn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="10dp"
+        android:text="Sİl "
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/yenispinner2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/yenietxtgiris"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.294" />
+
+    <Spinner
+        android:id="@+id/yenispinner1"
+        android:layout_width="150dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="20dp"
+        android:background="@drawable/spinnerrr"
+        android:popupBackground="@color/purple_200"
+
+        android:entries="@array/krediler"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/yenispinner2"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/yenietxtgiris" />
+
+    <Spinner
+        android:id="@+id/yenispinner2"
+        android:layout_width="150dp"
+        android:layout_height="80dp"
+        android:popupBackground="@color/purple_200"
+
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/spinnerrr"
+        android:entries="@array/notlar"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/yenispinner1"
+        app:layout_constraintTop_toBottomOf="@+id/yenietxtgiris" />
+</androidx.constraintlayout.widget.ConstraintLayout>

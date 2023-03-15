@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/arkaa"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <AutoCompleteTextView
+            android:id="@+id/etxtgiris"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="25dp"
+            android:textColorHint="@color/purple_200"
+            android:textColor="@color/purple_200"
+            android:layout_marginEnd="20dp"
+            android:backgroundTint="@color/purple_200"
+            android:hint="Ders Adını Giriniz"
+            android:minHeight="48dp"
+            app:layout_constraintEnd_toStartOf="@+id/btn1"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="10dp"
+            android:background="@color/purple_700"
+            android:textColor="@color/black"
+            android:text="Ekle"
+            app:layout_constraintBottom_toTopOf="@+id/spinner2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/etxtgiris"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Spinner
+            android:id="@+id/spinner1"
+            android:layout_width="150dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="20dp"
+            android:entries="@array/krediler"
+            android:minHeight="48dp"
+            android:background="@drawable/spinnerrr"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/spinner2"
+            android:popupBackground="@color/purple_200"
+            app:layout_constraintHorizontal_bias="0.508"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etxtgiris" />
+
+        <Spinner
+            android:id="@+id/spinner2"
+            android:layout_width="150dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="35dp"
+            android:layout_marginEnd="20dp"
+            android:entries="@array/notlar"
+            android:background="@drawable/spinnerrr"
+            android:minHeight="48dp"
+            android:popupBackground="@color/purple_200"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/spinner1"
+            app:layout_constraintTop_toBottomOf="@+id/etxtgiris" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/black"></View>
+
+    <ScrollView
+        android:id="@+id/scrl"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:contentDescription="@string/appbar_scrolling_view_behavior">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/rootLayout"></LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:minHeight="48dp"
+        android:onClick="ortalamaHesapla"
+        android:text="Hesapla"
+        android:textColor="#000000" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>
